@@ -61,7 +61,7 @@ function UpdateRecords(id, prop, value) {
     if (value === "") {
         delete collection[id][prop];
     } else if (prop === "Tracks") {
-        collection[id][prop] = colection[id][prop] || [];
+        collection[id][prop] = collection[id][prop] || [];
         collection[id][prop].push(value);
     } else {
         collection[id][prop] = value;
@@ -80,3 +80,14 @@ for (var i = 1; i < 5; i++) {
 }
 
 console.log(myArray);
+
+/* DO WHILE LOOPS , will always run atleast one time before checking the condition */
+
+var i = 10
+
+do {
+    myArray.push(i);
+    i++;
+} while (i < 5)
+
+console.log(i, myArray);
